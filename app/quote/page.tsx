@@ -1,5 +1,5 @@
 // import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+
 import React from "react";
 import { FaUsers, FaShieldAlt, FaChartLine } from "react-icons/fa";
 
@@ -228,7 +228,7 @@ const page = () => {
           Contact Us
         </button>
       </div>
-      <Footer/>
+ 
   
     </div>
   );

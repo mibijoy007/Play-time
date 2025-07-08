@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
                   <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
                 </div>
               </div>
-              <span className="text-xl font-bold text-gray-800">Render-Edge Studio</span>
+              <span className="text-xl font-bold text-gray-800">Nouveau-Visuals</span>
             </div>
             
             <div>
@@ -93,7 +93,7 @@ const Footer: React.FC = () => {
               <svg className="w-5 h-5 text-gray-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
               </svg>
-              <span className="text-gray-600">Bogura, Bangladesh</span>
+              <span className="text-gray-600">Dhaka, Bangladesh</span>
             </div>
           </div>
 
@@ -124,10 +124,11 @@ const Footer: React.FC = () => {
         
       </div>
       {/* Copyright */}
-        <div className="border-t border-gray-200 mt-12 pt-8">
-          <div className="bg-gray-800 text-center py-4 -mx-4 px-4">
+        <div className="border-t border-gray-200 mt-12 pt-8 ">
+          {/* <div className="bg-gray-800 text-center py-4 -mx-4 px-4"> */}
+          <div className="bg-gray-800 text-center py-4  px-4">
             <p className="text-yellow-400 text-sm">
-              © Render-Edge-Studio | All Rights Reserved | 2025
+              © Nouveau-Visuals | All Rights Reserved | 2025
             </p>
           </div>
         </div>

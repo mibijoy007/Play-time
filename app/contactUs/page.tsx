@@ -6,7 +6,7 @@ import { FaChevronDown, FaComments, FaMobileAlt, FaLayerGroup } from 'react-icon
 import { motion, AnimatePresence } from 'framer-motion';
 import ContactUs from '@/components/ContactUs';
 import Address from '@/components/Address';
-import Footer from '@/components/Footer';
+// import Footer from '@/components/Footer';
 
 interface FAQItem {
   id: number;
@@ -175,7 +175,7 @@ const FAQSection: React.FC = () => {
     <section>
         <ContactUs/>
         <Address/>
-        <Footer/>
+        {/* <Footer/> */}
 
     </section>
     </div>

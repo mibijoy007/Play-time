@@ -142,7 +142,7 @@ const ContactUs: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-medium">Office Email</h3>
-                      <p className="text-blue-200">jack@Papa.com😂</p>
+                      <p className="text-blue-200">xxx@xxx.com</p>
                     </div>
                   </div>
                 </div>

@@ -34,7 +34,7 @@ export default function SliderSix() {
 
   // Slide text content
   const slideTexts = [
-    "Summer Collection 2023",
+    "hhhhhhhhhhhhhow we work Summer Collection 2023",
     "New Arrivals Just In",
     "Limited Edition Styles",
     "Fall Favorites",
@@ -50,7 +50,7 @@ export default function SliderSix() {
 
   return (
     <div className="relative h-screen ">
-      {/* Slider Container */}
+      {/* Slider Container */} 
       <div ref={sliderRef} className="keen-slider h-full">
         {/* Slide 1 */}
         <div className="keen-slider__slide">

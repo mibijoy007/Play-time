@@ -56,8 +56,10 @@ export default function SliderNine() {
               <h1 className="text-2xl mb-4 font-semibold">
                What we do
               </h1>
-              <h1 className="text-xl font-semibold ">
-               Our job is all about crafting images with the utmost care and attention to detail. As architects and image makers, we constantly strive for improvement to create the best possible outcome. We understand that crucial elements like texturing, lighting, and selecting the perfect perspective are key in conveying the story we want to tell. It’s a constant learning process, but we are always up for the challenge of refining our craft.
+              <h1 className="text-xl text-justify px-4 font-thin ">
+               baki baki due
+               
+               <br />Our job is all about crafting images with the utmost care and attention to detail. As architects and image makers, we constantly strive for improvement to create the best possible outcome. We understand that crucial elements like texturing, lighting, and selecting the perfect perspective are key in conveying the story we want to tell. It’s a constant learning process, but we are always up for the challenge of refining our craft.
               </h1>
             </div>
             {/* Text at bottom left */}
