@@ -12,7 +12,8 @@ import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 
 import galleryData from "./gallery.json";
-import Navbar from "@/components/Navbar";
+// import Navbar from "@/components/Navbar";
+// import NavTest from "@/components/NavTest";
 
 type GalleryItem = {
   title: string;
@@ -40,13 +41,15 @@ export default function GalleryLightbox({
     setOpen(false);
   };
 
-  const prevIndex = () => (index === 0 ? gallery.length - 1 : index - 1);
-  const nextIndex = () => (index === gallery.length - 1 ? 0 : index + 1);
+  // const prevIndex = () => (index === 0 ? gallery.length - 1 : index - 1);
+  // const nextIndex = () => (index === gallery.length - 1 ? 0 : index + 1);
 
   return (
-    <div>
-        <Navbar/>
-    <div className={`w-full mt-20 ${className}`}>
+    <div className="">
+    {/* <div className="overflow-x-hidden "> */}
+        {/* <Navbar/> */}aaaaaaa
+        {/* <NavTest/> */}
+    <div className={`w-full mt-5 md:mt-7 ${className}`}>
       {/* Gallery Grid - Three Columns with Hover Text */}
       <div className="columns-1 md:columns-2 lg:columns-3 gap-6 p-4 space-y-6">
         {gallery.map((item: GalleryItem, i: number) => (
@@ -125,7 +128,7 @@ export default function GalleryLightbox({
         />
 
         {/* Custom Prev Button */}
-        <button
+        {/* <button
           onClick={() => setIndex(prevIndex())}
           className="yarl__button yarl__button_prev absolute top-1/2 left-5 -translate-y-1/2 z-20"
           aria-label="Previous image"
@@ -133,10 +136,12 @@ export default function GalleryLightbox({
           <svg className="yarl__icon" viewBox="0 0 24 24" fill="currentColor">
             <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
           </svg>
-        </button>
+        </button> */}
+
+
 
         {/* Custom Next Button */}
-        <button
+        {/* <button
           onClick={() => setIndex(nextIndex())}
           className="yarl__button yarl__button_next absolute top-1/2 right-5 -translate-y-1/2 z-20"
           aria-label="Next image"
@@ -144,7 +149,9 @@ export default function GalleryLightbox({
           <svg className="yarl__icon" viewBox="0 0 24 24" fill="currentColor">
             <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
           </svg>
-        </button>
+        </button> */}
+
+
       </div>
 </div>
       {/* Custom Styles */}

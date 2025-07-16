@@ -101,7 +101,7 @@ const Faq = () => {
 
     //   </div>
     // </div>
-    <div className=" min-h-screen font-sans text-white bg-[linear-gradient(135deg,_#1b398f,_#1b3ba2,_#0e49af,_#004d9d,_#006987,_#007672)]">
+    <div id="faq" className=" min-h-screen font-sans text-white bg-[linear-gradient(135deg,_#1b398f,_#1b3ba2,_#0e49af,_#004d9d,_#006987,_#007672)]">
       <div className="container mx-auto px-4 pt-20 sm:pt-6 lg:pt-24 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start">
 

@@ -19,7 +19,7 @@ const HowWeWork = () => {
      {/* start   */}
 <div className="">
         <h2 className="text-center mb-6 pt-8 text-5xl font-semibold">
-          How it <span className="text-blue-600 font-bold">works?</span>
+          How We <span className="text-blue-600 font-bold">Work?</span>
         </h2>
         <p className="text-center mb-10  text-gray-600">
           At <span className="font-bold">Nouveau Visuals,</span>  we turn ideas into stunning visuals—whether you’re starting from scratch or have a developed concept.

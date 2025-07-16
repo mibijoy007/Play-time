@@ -100,10 +100,10 @@ const pricingPlans: readonly PricingPlan[] = [
 const page = () => {
   return (
     <div>
-      <div className="bg-white mb-24">{/* <Navbar /> */}</div>
+      {/* <div className="bg-white mb-24"><Navbar /></div> */}
 
       {/* Services Section */}
-      <div className="bg-[#ededed]">
+      <div id="services" className="bg-[#ededed]">
         <h2 className="text-center mb-6 pt-8 text-4xl font-semibold">
           Our Services
         </h2>

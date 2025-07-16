@@ -121,8 +121,8 @@ const ContactUs: React.FC = () => {
                   Get In Touch With Us!
                 </h1>
                 <p className="text-blue-100 mb-8 leading-relaxed">
-                  We&rdquo;d love to hear from you. Have a question, suggestion, or just want to
-                  say hello? Reach out and we&rdquo;ll get back to you as soon as possible.
+                  We&apos;d love to hear from you. Have a question, suggestion, or just want to
+                  say hello? Reach out and we&apos;ll get back to you as soon as possible.
                 </p>
                 
                 <div className="space-y-6">
@@ -131,8 +131,8 @@ const ContactUs: React.FC = () => {
                       <FiPhone className="h-6 w-6 text-blue-200" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium">What&rdquo;s App Number</h3>
-                      <p className="text-blue-200">+880-1xxxxxxx</p>
+                      <h3 className="text-lg font-medium">What&apos;s App Number</h3>
+                      <p className="text-blue-200">+880-1777100592</p>
                     </div>
                   </div>
                   
@@ -142,7 +142,7 @@ const ContactUs: React.FC = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-medium">Office Email</h3>
-                      <p className="text-blue-200">xxx@xxx.com</p>
+                      <p className="text-blue-200">mail.nouveau.gentech@gmail.com</p>
                     </div>
                   </div>
                 </div>

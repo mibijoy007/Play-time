@@ -32,33 +32,46 @@ export default function SliderOne() {
   //   return () => clearInterval(interval);
   // }, [instanceRef]);
 
+
+
   // Slide text content
+
+// Add text: 06-01 (Original Photograph)
+//           06-02 (3d Rendering + Photomatching)
+
   const slideTexts = [
-    "Summer Collection 2023",
-    "New Arrivals Just In",
-    "Limited Edition Styles",
-    "Fall Favorites",
-    "Winter Preview",
+    "Commercial Center",
+    "Frontyard Landscaping",
+    "Kitchen Renovation",
+    "Residential Landscaping",
+    "Backyard Bliss- A French Retreat",
+    "Real Estate Virtual Renovation"
   ];
   const slidePara = [
-    "Summer Collection 2023",
-    "New Arrivals Just In",
-    "Limited Edition Styles",
-    "Fall Favorites",
-    "Winter Preview",
+    "Whiting, NJ, US",
+    "NC, US",
+    "LA, US",
+    "Allendorf, Germany",
+    "Viuz-en-Sallaz, France",
+    "US"
   ];
 
   return (
     <div className="relative h-screen ">
       {/* Slider Container */}
       <div ref={sliderRef} className="keen-slider h-full">
+        
+
+
+        
+
         {/* Slide 1 */}
         <div className="keen-slider__slide">
           <div className=" grid grid-cols-2">
             
             <Image
-            src="/BannerOne/play2.jpg"
-             alt="Play image 1"
+            src="/hero-section/1.jpg"
+             alt="NV 1"
               fill
               className="object-cover"
               sizes="100vw"
@@ -68,136 +81,152 @@ export default function SliderOne() {
               <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
                 {slideTexts[0]}
               </h2>
-              <p className=" text-MD mt-4 ml-4 font-bold text-white drop-shadow-lg">
+              <p className=" text-MD mt-4 ml-4 font-semibold text-white drop-shadow-lg">
                 {slidePara[0]}
               </p>
             </div>
           </div>
         </div>
 
-        {/* Slide 2 */}
+        
+         {/* Slide 2 */}
         <div className="keen-slider__slide">
-          <div className="grid grid-cols-2 h-full relative">
+          <div className=" grid grid-cols-2">
+            
             <Image
-              src="/BannerOne/play2.jpg"
-              alt="Play image 2"
-              width={640} // Add appropriate width
-              height={663} // Add appropriate height
-              className="object-cover w-full h-full"
-              priority
-              sizes="50vw"
-            />
-            <Image
-              src="/BannerOne/play3.jpg"
-              alt="Play image 3"
-              width={400}
-              height={800}
-              className="object-cover mx-auto mt-52 "
-              priority
+            src="/hero-section/2.jpg"
+             alt="NV 2"
+              fill
+              className="object-cover"
+              sizes="100vw"
             />
             {/* Text at bottom left */}
             <div className="absolute flex bottom-8 left-8 max-w-2xl">
               <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
                 {slideTexts[1]}
               </h2>
-              <p className="text-MD mt-4 ml-4 font-bold text-white drop-shadow-lg">
-                {slideTexts[2]}
+              <p className=" text-MD mt-4 ml-4 font-semibold text-white drop-shadow-lg">
+                {slidePara[1]}
               </p>
             </div>
           </div>
         </div>
 
-        {/* Slide 3 */}
-        <div className="keen-slider__slide">
-          <div className="grid grid-cols-2 h-full relative">
-            <Image
-              src="/BannerOne/play4.jpg"
-              alt="Play image 4"
-              width={400} // Add appropriate width
-              height={800} // Add appropriate height
-              className="object-cover mx-auto my-auto"
-              priority
-              sizes="50vw"
-            />
-            <Image
-              src="/BannerOne/play5.jpg"
-              alt="Play image 5"
-              width={400} // Add appropriate width
-              height={800} // Add appropriate height
-              className="object-cover mx-auto my-auto"
-              priority
-              sizes="50vw"
-            />
-            {/* Text at bottom left */}
-            <div className="absolute flex bottom-8 left-8 max-w-2xl">
-              <h2 className="text-3xl md:text-4xl font-semibold  drop-shadow-lg">
-                {slideTexts[2]}
-              </h2>
-              <p className="text-lg mt-4 ml-4 font-semibold  drop-shadow-lg">
-                {slideTexts[2]}
-              </p>
-            </div>
-          </div>
-        </div>
 
-        {/* Slide 4 */}
+
+
+{/* Slide 3 with two images*/}
         <div className="keen-slider__slide">
-          <div className="grid grid-cols-2 h-full relative">
+          <div className="grid grid-cols-2 h-full relative bg-[#fbfaff]">
             <Image
-              src="/BannerOne/play5.jpg"
-              alt="Play image 5"
-              width={400} // Add appropriate width
-              height={800} // Add appropriate height
-              className="object-cover mx-auto my-24"
-              priority
-              sizes="50vw"
-            />
-            <Image
-              src="/BannerOne/play2.jpg"
+              src="/sumit/renovate-before.jpg"
               alt="Play image 2"
-              width={640} // Add appropriate width
-              height={663} // Add appropriate height
-              className="object-cover w-full h-full"
+              width={600} // Add appropriate width
+              height={400} // Add appropriate height
+              // className="object-cover w-full h-full"
+              className="object-cover mx-auto my-auto"
               priority
               sizes="50vw"
             />
-
-            {/* Text at bottom left */}
-            <div className="absolute flex bottom-8 left-8 max-w-2xl">
-              <h2 className="text-3xl md:text-4xl font-semibold drop-shadow-lg">
-                {slideTexts[3]}
-              </h2>
-              <p className="text-MD mt-4 ml-4 font-bold  drop-shadow-lg">
-                {slideTexts[3]}
-              </p>
-            </div>
-          </div>
-        </div>
-        {/* 5 no slider */}
-        <div className="keen-slider__slide">
-          <div className=" flex h-full relative">
             <Image
-              src="/BannerOne/play8.jpg"
-              alt="Play image 5"
-              width={400} // Add appropriate width
-              height={800} // Add appropriate height
-              className="object-cover mx-auto my-24"
+              src="/sumit/renovate-after.jpg"
+              alt="Play image 3"
+              width={600}
+              height={400}
+              className="object-cover mx-auto my-auto "
               priority
-              sizes="50vw"
             />
-            
-
             {/* Text at bottom left */}
             <div className="absolute flex bottom-8 left-8 max-w-2xl">
-              <h2 className="text-3xl md:text-4xl font-semibold drop-shadow-lg">
-                {slideTexts[4]}
+              <h2 className="text-3xl md:text-4xl font-bold text-black drop-shadow-lg">
+                {slideTexts[5]}
               </h2>
-              <p className="text-MD mt-4 ml-4 font-bold  drop-shadow-lg">
-                {slideTexts[4]}
+              <p className="text-MD mt-4 ml-4 font-semibold text-black drop-shadow-lg">
+                {slidePara[5]}
+              </p>
+            </div>
+            
+          </div>
+        </div>
+
+
+
+
+         {/* Slide 4 */}
+        <div className="keen-slider__slide">
+          <div className=" grid grid-cols-2">
+            
+            <Image
+            src="/hero-section/3.jpg"
+             alt="NV 3"
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
+            {/* Text at bottom left */}
+            <div className="absolute flex bottom-8 left-8 max-w-2xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
+                {slideTexts[2]}
+              </h2>
+              <p className=" text-MD mt-4 ml-4 font-semibold text-white drop-shadow-lg">
+                {slidePara[2]}
               </p>
             </div>
           </div>
         </div>
+
+
+         {/* Slide 5 */}
+        <div className="keen-slider__slide">
+          <div className=" grid grid-cols-2">
+            <Image
+            src="/hero-section/4.jpg"
+             alt="NV 4"
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
+            {/* Text at bottom left */}
+            <div className="absolute flex bottom-8 left-8 max-w-2xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
+                {slideTexts[3]}
+              </h2>
+              <p className=" text-MD mt-4 ml-4 font-semibold text-white drop-shadow-lg">
+                {slidePara[3]}
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+         {/* Slide 6 */}
+        <div className="keen-slider__slide">
+          <div className=" grid grid-cols-2">
+            <Image
+            src="/hero-section/5.jpg"
+             alt="NV 5"
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
+            {/* Text at bottom left */}
+            <div className="absolute flex bottom-8 left-8 max-w-4xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
+                {slideTexts[4]}
+              </h2>
+              <p className=" text-MD mt-4 ml-4 font-semibold text-white drop-shadow-lg">
+                {slidePara[4]}
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+     
+
 
         
       </div>
@@ -205,14 +234,14 @@ export default function SliderOne() {
       {/* Navigation Dots - Positioned at bottom right */}
       {loaded && instanceRef.current && (
         <div className="absolute bottom-8 right-8 flex space-x-2">
-          {[0, 1, 2, 3, 4].map((idx) => (
+          {[0, 1, 2, 3, 4, 5].map((idx) => (
             <button
               key={idx}
               onClick={() => instanceRef.current?.moveToIdx(idx)}
-              className={`w-3 h-3 rounded-full transition-all ${
+              className={`w-2 h-2 rounded-full transition-all ${
                 currentSlide === idx
                   ? "bg-white scale-125"
-                  : "bg-gray-300 bg-opacity-50"
+                  : "bg-gray-500 bg-opacity-50"
               }`}
               aria-label={`Go to slide ${idx + 1}`}
             />
@@ -222,3 +251,67 @@ export default function SliderOne() {
     </div>
   );
 }
+
+
+
+// {/* Slide 2 with two images*/}
+//         <div className="keen-slider__slide">
+//           <div className="grid grid-cols-2 h-full relative">
+//             <Image
+//               src="/hero-section/2.jpg"
+//               alt="Play image 2"
+//               width={640} // Add appropriate width
+//               height={663} // Add appropriate height
+//               className="object-cover w-full h-full"
+//               priority
+//               sizes="50vw"
+//             />
+//             <Image
+//               src="/hero-section/3.jpg"
+//               alt="Play image 3"
+//               width={400}
+//               height={800}
+//               className="object-cover mx-auto mt-52 "
+//               priority
+//             />
+//             {/* Text at bottom left */}
+//             <div className="absolute flex bottom-8 left-8 max-w-2xl">
+//               <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
+//                 {slideTexts[1]}
+//               </h2>
+//               <p className="text-MD mt-4 ml-4 font-bold text-white drop-shadow-lg">
+//                 {slideTexts[2]}
+//               </p>
+//             </div>
+//           </div>
+//         </div>
+
+
+
+
+
+        // {/* slide with only 1 image but at the middle squared shape */}
+        // <div className="keen-slider__slide">
+        //   <div className=" flex h-full relative">
+        //     <Image
+        //       src="/hero-section/5.jpg"
+        //       alt="Play image 5"
+        //       width={400} // Add appropriate width
+        //       height={800} // Add appropriate height
+        //       className="object-cover mx-auto my-24"
+        //       priority
+        //       sizes="50vw"
+        //     />
+            
+
+        //     {/* Text at bottom left */}
+        //     <div className="absolute flex bottom-8 left-8 max-w-2xl">
+        //       <h2 className="text-3xl md:text-4xl font-semibold drop-shadow-lg">
+        //         {slideTexts[4]}
+        //       </h2>
+        //       <p className="text-MD mt-4 ml-4 font-bold  drop-shadow-lg">
+        //         {slideTexts[4]}
+        //       </p>
+        //     </div>
+        //   </div>
+        // </div>

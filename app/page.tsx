@@ -34,8 +34,8 @@ export default function Home(): JSX.Element {
       <Faq/>
       {/* <SliderSeven/> */}
       <SliderEight/> {/* <Philosophy/> */}
-
-      <SliderNine/>
+      {/* here is problem form Philosophy */}
+      <SliderNine/>{/* <What we do/> */}
       <LastPage/>
     
     </SectionScrollerWrapper>

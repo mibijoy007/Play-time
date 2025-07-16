@@ -2,6 +2,7 @@
 import { useState, useEffect, ReactNode, JSX } from 'react';
 import { motion, Easing } from 'framer-motion';
 import Navbar from './Navbar'; // Import your new Navbar component
+import NavTest from './NavTest';
 
 interface SectionScrollerWrapperProps {
   children: ReactNode[];
@@ -74,7 +75,8 @@ export default function SectionScrollerWrapper({
   return (
     <div className="relative h-screen w-full overflow-hidden bg-black">
       {/* Navbar Component */}
-      <Navbar />
+      {/* <Navbar /> */}
+      {/* <NavTest/> */}
 
       {/* Navigation dots */}
       {showNavigationDots && (

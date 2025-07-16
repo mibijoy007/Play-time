@@ -7,7 +7,9 @@ module.exports = {
   images: {
     domains: [
       'https://www.play-time.es', // Example domain
+      'placehold.co',
       ],
+      dangerouslyAllowSVG: true,
   },
 }
 

@@ -5,7 +5,7 @@ import { FiMapPin, FiExternalLink } from 'react-icons/fi';
 
 const Address: React.FC = () => {
   const handleViewLargerMap = () => {
-    const address = "Nishindara Fakir Uddin School & College, Near At, Bogura 5800, Bangladesh";
+    const address = "Dhaka, Bangladesh";
     const encodedAddress = encodeURIComponent(address);
     window.open(`https://www.google.com/maps/search/?api=1&query=${encodedAddress}`, '_blank');
   };

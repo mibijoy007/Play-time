@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Dancing_Script, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import FooterWrapper from "@/components/FooterWrapper";
+import NavTest from "@/components/NavTest";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +38,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} antialiased`}
       >
-        
+        <NavTest/>
         {children}
 
        <FooterWrapper/>

@@ -1,15 +1,30 @@
 import Link from 'next/link';
-import { 
-  FaFacebook, 
-  FaInstagram, 
-  FaTwitter, 
-  FaYoutube, 
-  FaLinkedin, 
-  FaTiktok, 
-  FaBehance, 
-  FaDribbble,
-  FaVimeo 
+import {
+  FaFacebook,
+  FaInstagram,
+  // FaYoutube,
+  FaLinkedin,
+  // FaTiktok,
+  FaBehance,
+  // FaDribbble,
+  // FaVimeo 
 } from 'react-icons/fa';
+
+interface NVSocialsInterface {
+  instagram: string;
+  linkedin: string;
+  facebook: string;
+  behance: string;
+}
+
+const NVSocials: NVSocialsInterface = {
+  instagram: "https://www.instagram.com/nouveau_visuals/",
+  linkedin: "https://www.linkedin.com/company/nouveau-visuals",
+  facebook: "https://www.facebook.com/nouveau3dvisuals/",
+  behance: "https://www.behance.net/ishrakSumit",
+}
+
+import { FaXTwitter } from 'react-icons/fa6';
 
 const Footer: React.FC = () => {
   return (
@@ -24,39 +39,41 @@ const Footer: React.FC = () => {
                   <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
                 </div>
               </div>
-              <span className="text-xl font-bold text-gray-800">Nouveau-Visuals</span>
+              <span className="text-xl font-bold text-gray-800">Nouveau Visuals</span>
             </div>
-            
-            <div>
-              <h4 className="text-gray-600 font-medium mb-3">Find Us on Social Media</h4>
+
+            <div className='max-w-[12rem]'>
+              <h4 className="text-gray-600 font-medium mb-3">Find Us on Social Media:</h4>
               <div className="flex flex-wrap gap-2">
-                <Link href="#" className="FootIcon">
+                <Link href={NVSocials.facebook} className="FootIcon" target="_blank"
+                  rel="noopener noreferrer">
                   <FaFacebook size={15} />
                 </Link>
-                <Link href="#" className="FootIcon">
+                <Link href={NVSocials.instagram} className="FootIcon" target="_blank"
+                  rel="noopener noreferrer">
                   <FaInstagram size={15} />
                 </Link>
-                <Link href="#" className="FootIcon">
-                  <FaTwitter size={15} />
+                {/* <Link href="#" className="FootIcon" target="_blank"
+                        rel="noopener noreferrer">
+                  <FaXTwitter  size={15} />
                 </Link>
-                <Link href="#" className="FootIcon">
+                <Link href="#" className="FootIcon" target="_blank"
+                        rel="noopener noreferrer">
                   <FaYoutube size={15} />
-                </Link>
-                <Link href="#" className="FootIcon">
+                </Link> */}
+                <Link href={NVSocials.linkedin} className="FootIcon" target="_blank"
+                  rel="noopener noreferrer">
                   <FaLinkedin size={15} />
                 </Link>
-                <Link href="#" className="FootIcon">
+                {/* <Link href="#" className="FootIcon" target="_blank"
+                        rel="noopener noreferrer">
                   <FaTiktok size={15} />
-                </Link>
-                <Link href="#" className="FootIcon">
+                </Link> */}
+                <Link href={NVSocials.behance} className="FootIcon" target="_blank"
+                  rel="noopener noreferrer">
                   <FaBehance size={15} />
                 </Link>
-                <Link href="#" className="FootIcon">
-                  <FaDribbble size={15} />
-                </Link>
-                <Link href="#" className="FootIcon">
-                  <FaVimeo size={15} />
-                </Link>
+
               </div>
             </div>
           </div>
@@ -66,22 +83,27 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold text-blue-600 mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Link href="/aboutUs" className="text-gray-600 hover:text-blue-600 transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/portfolio" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Link href="/work" className="text-gray-600 hover:text-blue-600 transition-colors">
                   Portfolio
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Link href="/quote#services" className="text-gray-600 hover:text-blue-600 transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                
+                <Link href="/quote#faq" className="text-gray-600 hover:text-blue-600 transition-colors">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+
               </li>
             </ul>
           </div>
@@ -99,8 +121,62 @@ const Footer: React.FC = () => {
 
           {/* Reviews */}
           <div>
-            <h3 className="text-lg font-semibold text-blue-600 mb-4">Our Reviews</h3>
-            <div className="space-y-3">
+            <h3 className="text-lg font-semibold text-blue-600 mb-2">Our Technology Partner</h3>
+
+            <div className="space-y-4">
+              <div className="flex items-center space-x-2">
+                {/* <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                  <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
+                </div>
+              </div> */}
+                <span className="text-xl font-bold text-gray-800">Nouveau GenTech</span>
+              </div>
+
+              <div className='max-w-[12rem]'>
+                <h4 className="text-gray-600 font-medium mb-3">Find Us on Social Media: </h4>
+                <div className="flex flex-wrap gap-2">
+                  <Link href="https://x.com/MaksudulIslam71" className="FootIcon" target="_blank"
+                        rel="noopener noreferrer">
+                    <FaXTwitter size={15} />
+                  </Link>
+                  <Link href="https://www.linkedin.com/in/maksudul-i-490750102" className="FootIcon" target="_blank"
+                        rel="noopener noreferrer">
+                    <FaLinkedin size={15} />
+                  </Link>
+                  {/* <Link href="#" className="FootIcon" target="_blank"
+                        rel="noopener noreferrer">
+                    <FaYoutube size={15} />
+                  </Link>
+                  <Link href="#" className="FootIcon" target="_blank"
+                        rel="noopener noreferrer">
+                    <FaTiktok size={15} />
+                  </Link>
+                  <Link href="#" className="FootIcon" target="_blank"
+                        rel="noopener noreferrer">
+                    <FaFacebook size={15} />
+                  </Link>
+                  <Link href="#" className="FootIcon" target="_blank"
+                        rel="noopener noreferrer">
+                    <FaInstagram size={15} />
+                  </Link>
+                  <Link href="#" className="FootIcon" target="_blank"
+                        rel="noopener noreferrer">
+                    <FaBehance size={15} />
+                  </Link> */}
+                  {/* <Link href="#" className="FootIcon" target="_blank"
+                        rel="noopener noreferrer">
+                  <FaDribbble size={15} />
+                </Link>
+                <Link href="#" className="FootIcon" target="_blank"
+                        rel="noopener noreferrer">
+                  <FaVimeo size={15} />
+                </Link> */}
+                </div>
+              </div>
+            </div>
+
+            {/* <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <div className="flex items-center space-x-1">
                   <span className="text-green-600 text-lg">★</span>
@@ -117,21 +193,26 @@ const Footer: React.FC = () => {
                   DMCA PROTECTED
                 </span>
               </div>
-            </div>
+            </div> */}
+
           </div>
+
+
+
+
         </div>
 
-        
+
       </div>
       {/* Copyright */}
-        <div className="border-t border-gray-200 mt-12 pt-8 ">
-          {/* <div className="bg-gray-800 text-center py-4 -mx-4 px-4"> */}
-          <div className="bg-gray-800 text-center py-4  px-4">
-            <p className="text-yellow-400 text-sm">
-              © Nouveau-Visuals | All Rights Reserved | 2025
-            </p>
-          </div>
+      <div className="border-t border-gray-200 mt-12 pt-8 ">
+        {/* <div className="bg-gray-800 text-center py-4 -mx-4 px-4"> */}
+        <div className="bg-gray-800 text-center py-4  px-4">
+          <p className="text-yellow-400 text-sm">
+            © Nouveau-Visuals | All Rights Reserved | 2025
+          </p>
         </div>
+      </div>
     </footer>
   );
 };
