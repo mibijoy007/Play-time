@@ -27,13 +27,13 @@ const CompaniesWorked: React.FC = () => {
   return (
 
     
-    <section className="w-full py-10 pt-18 bg-gray-50 font-inter">
+    <section className="w-full py-10 pt-10 md:pt-18 bg-gray-50 font-inter">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Updated Title and added Subtitle */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-800 mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center text-gray-800 mb-4">
           Companies We&apos;ve Worked With
         </h2>
-        <p className="text-base  text-center text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-base  text-center text-gray-600 mb-8 max-w-2xl mx-auto px-2 leading-relaxed">
       
 
             Over the years, we&apos;ve had the honor of partnering with a wide array of brands, 

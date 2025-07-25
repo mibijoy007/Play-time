@@ -9,7 +9,7 @@ interface PricingPlan {
   title: string;
   subtitle: string;
   price: string;
-  duration: string;
+  duration?: string;
   features: string[];
   isPopular?: boolean;
   imageUrl?: string;
@@ -28,12 +28,12 @@ const pricingPlans: readonly PricingPlan[] = [
       "Environment",
       "Rendered Images (Day/Night)",
       "Flythrough Animation",
-      "================",
-      "Provided CAD Model",
-      "Photorealistic Texture",
-      "Cinematics view",
-      "Photorealistic Animation",
-      "Full HD animation",
+      // "================",
+      // "Provided CAD Model",
+      // "Photorealistic Texture",
+      // "Cinematics view",
+      // "Photorealistic Animation",
+      // "Full HD animation",
     ],
   },
   {
@@ -48,12 +48,12 @@ const pricingPlans: readonly PricingPlan[] = [
       "Customized Furniture",
       "Rendered Images",
       "Walkthrough Animation",
-      "================",
-      "Basic 3D Modeling",
-      "Photorealistic Texture",
-      "Cinematics view",
-      "Photorealistic Animation",
-      "Full HD animation",
+      // "================",
+      // "Basic 3D Modeling",
+      // "Photorealistic Texture",
+      // "Cinematics view",
+      // "Photorealistic Animation",
+      // "Full HD animation",
     ],
   },
   {
@@ -69,14 +69,14 @@ const pricingPlans: readonly PricingPlan[] = [
       "Rendered Images (Day/Night)",
       "Walkthrough Animation",
       "Hardscape & Softscape Plans with Dimension",
-      "================",
-      "Hard 3D Modeling",
-      "Photorealistic Texture",
-      "Water And Smoke Simulation",
-      "Particles Simulation",
-      "Cinematics view",
-      "Photorealistic Animation",
-      "Full HD animation",
+      // "================",
+      // "Hard 3D Modeling",
+      // "Photorealistic Texture",
+      // "Water And Smoke Simulation",
+      // "Particles Simulation",
+      // "Cinematics view",
+      // "Photorealistic Animation",
+      // "Full HD animation",
     ],
     // isPopular: true,
   },
@@ -89,15 +89,15 @@ const pricingPlans: readonly PricingPlan[] = [
     features: [
       "High Quality Virtually Renovated Photo",
       "Virtual Staging of Interiors",
-      "================",
-      "Hard 3D Modeling",
-      "Photorealistic Texture",
-      "Water And Smoke Simulation",
-      "Particles Simulation",
-      "Cinematics view",
-      "VFX Integration",
-      "Photorealistic Animation",
-      "4k Animation",
+      // "================",
+      // "Hard 3D Modeling",
+      // "Photorealistic Texture",
+      // "Water And Smoke Simulation",
+      // "Particles Simulation",
+      // "Cinematics view",
+      // "VFX Integration",
+      // "Photorealistic Animation",
+      // "4k Animation",
     ],
   },
 ];
@@ -109,7 +109,7 @@ const page = () => {
 
       {/* Services Section */}
       <div id="services" className="bg-[#ededed] pt-5">
-        <h2 className="text-center mb-6 pt-8 text-4xl font-semibold">
+        <h2 className="text-center mb-4 pt-8 text-4xl font-semibold">
           Our Services
         </h2>
         <p className="text-center mb-2 text-sm text-gray-600">
@@ -222,7 +222,7 @@ Interior Visualizations starting from 500 USD
       {/* Pricing Section */}
       <div className="bg-gray-50 pt-12 pb-14 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-center mb-8 text-4xl font-bold text-gray-900">
+          <h2 className="text-center mb-6 text-4xl font-bold text-gray-900">
             Our Pricing Plans
           </h2>
           <p className="text-center mb-12 text-sm text-gray-600">
@@ -246,7 +246,7 @@ Interior Visualizations starting from 500 USD
 
                 {/* Header */}
                 <div className="text-center mb-8">
-                  <h3 className="quoteTitle mb-6 ">{plan.title}</h3>
+                  <h3 className="font-semibold  text-xl mb-6 text-start">{plan.title}</h3>
 
 
 
@@ -268,7 +268,7 @@ Interior Visualizations starting from 500 USD
 
 
                   {/* <p className="text-gray-500 text-sm mb-6">{plan.subtitle}</p> */}
-                  <p className="text-gray-500 text-sm mb-6">starting from</p>
+                  <p className="text-gray-500 text-start text-sm mb-6">starting from***</p>
                   {/* Price */}
                   <div className="mb-4">
                     <span className="text-5xl font-bold text-gray-900">

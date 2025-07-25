@@ -13,6 +13,7 @@ import "yet-another-react-lightbox/plugins/captions.css";
 
 import galleryData from "./gallery.json";
 import CompaniesWorked from "@/components/CompaniesWorked";
+import ToolsUsed from "@/components/ToolsUsed";
 // import Navbar from "@/components/Navbar";
 // import NavTest from "@/components/NavTest";
 
@@ -47,6 +48,7 @@ export default function GalleryLightbox({
 
   return (
     <div className="">
+      <ToolsUsed/>
       <CompaniesWorked/>
       {/* <div className="overflow-x-hidden "> */}
       {/* <Navbar/> */}
@@ -250,7 +252,7 @@ export default function GalleryLightbox({
 
 
         {/* behance section */}
-      <div className="relative w-full max-w-md m-4  overflow-hidden shadow-lg mt-12">
+      {/* <div className="relative w-full max-w-sm m-4  overflow-hidden shadow-lg mt-12">
         <div style={{ paddingBottom: '78.22%' }}></div>
         <iframe
           src="https://www.behance.net/embed/project/222051255?ilo0=1"
@@ -262,7 +264,7 @@ export default function GalleryLightbox({
           referrerPolicy="strict-origin-when-cross-origin"
         >
         </iframe>
-      </div>
+      </div> */}
 
 
     </div>

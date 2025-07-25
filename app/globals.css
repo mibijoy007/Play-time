@@ -4,9 +4,7 @@
   transition: all 0.3s ease;
 }
 
-.quoteTitle{
-  @apply font-semibold text-center text-2xl
-}
+
 
 .FootIcon{
   @apply w-7 h-7 bg-blue-500  rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors
@@ -59,7 +57,7 @@ animation: jump 1.5s infinite; /* Periodic jump animation */
               mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
             }
 
-            
+
 /* 
 iframe {
   scrollbar-width: none;
