@@ -5,7 +5,7 @@
 }
 
 .quoteTitle{
-  @apply font-semibold text-center text-3xl
+  @apply font-semibold text-center text-2xl
 }
 
 .FootIcon{
@@ -15,3 +15,57 @@
 .dancing {
   font-family: var(--font-dancing), cursive;
 }
+
+
+/*  button with the jump animation */
+.my-button {
+animation: jump 1.5s infinite; /* Periodic jump animation */
+}
+
+/* Keyframes for the jump effect */
+@keyframes jump {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); 
+  }
+}
+
+
+/* company logo */
+.logo-track {
+              display: flex;
+              width: max-content; /* Ensures the track is wide enough for all logos */
+              animation: scroll-logos 30s linear infinite; /* Adjust duration for speed */
+            }
+
+            .logo-track:hover {
+              animation-play-state: paused; /* Pause on hover */
+            }
+
+            @keyframes scroll-logos {
+              from {
+                transform: translateX(0);
+              }
+              to {
+                transform: translateX(-50%); /* Scrolls half the width to loop seamlessly */
+              }
+            }
+
+            /* Mask the overflow to create a clean slider fade effect */
+            .logo-slider-mask {
+              -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+              mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            }
+
+            
+/* 
+iframe {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+iframe::-webkit-scrollbar {
+  display: none;
+} */

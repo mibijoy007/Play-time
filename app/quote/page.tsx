@@ -12,11 +12,13 @@ interface PricingPlan {
   duration: string;
   features: string[];
   isPopular?: boolean;
+  imageUrl?: string;
 }
 
 const pricingPlans: readonly PricingPlan[] = [
   {
     title: "Exterior Visualization",
+    imageUrl: "/sumit/exterior.png",
     subtitle: "Send us your rough ideas, sketches, Cad drawings, Site Photos And get High Quality Stunning 3d Visualizations starting from ",
     price: "$400",
     duration: "??? Seconds Running Time",
@@ -36,6 +38,7 @@ const pricingPlans: readonly PricingPlan[] = [
   },
   {
     title: "Interior Visualization",
+    imageUrl: "/sumit/interior.png",
     subtitle: "Send us your ideas, sketches, Moodboards, Cad drawings, Existing Site Photos And get High Quality Stunning Interior Visualizations starting from ",
     price: "$500",
     duration: "??? Seconds Running Time",
@@ -54,7 +57,8 @@ const pricingPlans: readonly PricingPlan[] = [
     ],
   },
   {
-    title: "Landscape Visualization",
+    title: "Landscape Visuals",
+    imageUrl: "/sumit/landscape.png",
     subtitle: "Send us your Back Yard/ Front Yard Photos, Your ideas & inspirations and get your landscape designed with high quality 3d visuals Starting from ",
     price: "$300",
     duration: "??? Seconds Running Time",
@@ -74,10 +78,11 @@ const pricingPlans: readonly PricingPlan[] = [
       "Photorealistic Animation",
       "Full HD animation",
     ],
-    isPopular: true,
+    // isPopular: true,
   },
   {
     title: "Virtual Renovation",
+    imageUrl: "/sumit/renovate.png",
     subtitle: "Send us Real Images of your property, Let us know what kind of modifications you need, we will do this virtually. Starting from ",
     price: "$200",
     duration: "??? Seconds Running Time",
@@ -103,7 +108,7 @@ const page = () => {
       {/* <div className="bg-white mb-24"><Navbar /></div> */}
 
       {/* Services Section */}
-      <div id="services" className="bg-[#ededed]">
+      <div id="services" className="bg-[#ededed] pt-5">
         <h2 className="text-center mb-6 pt-8 text-4xl font-semibold">
           Our Services
         </h2>
@@ -203,11 +208,10 @@ Interior Visualizations starting from 500 USD
                             />
               </div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                Landscape Visualization
+                Virtual Renovation
               </h3>
               <p className="text-gray-600 text-sm">
-                Send us your Back Yard/ Front Yard Photos, Your ideas & inspirations and get your landscape designed with high quality 3d visuals Starting from 300 USD
-              </p>
+                  Send us Real Images of your property, Let us know what kind of modifications you need, we will do this virtually.              </p>
             </div>
 
 
@@ -225,11 +229,11 @@ Interior Visualizations starting from 500 USD
             Choose the perfect package for your business needs
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
+          <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-4 items-start">
             {pricingPlans.map((plan, index) => (
               <div
                 key={index}
-                className={`relative bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl h-auto ${
+                className={`relative bg-white rounded-xl shadow-lg p-8 transition-all duration-300  hover:shadow-xl hover:scale-105 h-auto ${
                   plan.isPopular ? "ring-2 ring-red-500" : ""
                 }`}
               >
@@ -242,9 +246,29 @@ Interior Visualizations starting from 500 USD
 
                 {/* Header */}
                 <div className="text-center mb-8">
-                  <h3 className="quoteTitle mb-2">{plan.title}</h3>
-                  <p className="text-gray-500 text-sm mb-6">{plan.subtitle}</p>
+                  <h3 className="quoteTitle mb-6 ">{plan.title}</h3>
 
+
+
+                  <div className="text-3xl mb-4 text-pink-600">
+                {/* <FaChartLine />*/}
+
+                { plan.imageUrl &&
+                 <Image
+                              src={plan.imageUrl}
+                              alt={plan.title}
+                              width={400}
+                              height={400}
+                              className="object-cover mx-auto my-auto "
+                              priority
+                            />
+                            }
+              </div>
+
+
+
+                  {/* <p className="text-gray-500 text-sm mb-6">{plan.subtitle}</p> */}
+                  <p className="text-gray-500 text-sm mb-6">starting from</p>
                   {/* Price */}
                   <div className="mb-4">
                     <span className="text-5xl font-bold text-gray-900">
@@ -253,9 +277,9 @@ Interior Visualizations starting from 500 USD
                   </div>
 
                   {/* Duration */}
-                  <p className="text-gray-600 text-sm font-medium">
+                  {/* <p className="text-gray-600 text-sm font-medium">
                     {plan.duration}
-                  </p>
+                  </p> */}
                 </div>
 
                 {/* Features */}
@@ -283,9 +307,9 @@ Interior Visualizations starting from 500 USD
 
 
                 {/* Buy Button */}
-                <button className="w-full cursor-pointer bg-teal-900 hover:bg-teal-800 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300">
+                {/* <button className="w-full cursor-pointer bg-teal-900 hover:bg-teal-800 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300">
                   Buy Now
-                </button>
+                </button> */}
 
                 {/* Guarantee */}
                 <p className="text-center text-gray-400 text-xs mt-4">
@@ -299,24 +323,12 @@ Interior Visualizations starting from 500 USD
 
 
 
-            <Faq/>
+           
 
 
-      {/* Contact Section */}
-      <div className="bg-[#ededed] p-7 flex flex-col items-center justify-center">
-        <h2 className="text-5xl font-semibold text-center mb-5 ">
-          Lest Talk About Your Project
-        </h2>
-        <p className="text-center text-gray-600">
-          A quick discussion helps us fully understand your goals, timeline, and
-          expectations <br /> — ensuring you get the best possible results,
-          tailored to your needs.
-        </p>
-        <button className=" mt-5 cursor-pointer bg-teal-900 hover:bg-teal-800 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300">
-          Contact Us
-        </button>
-      </div>
+    
  
+  <Faq/>
   
     </div>
   );

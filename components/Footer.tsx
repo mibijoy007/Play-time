@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   FaFacebook,
@@ -32,14 +33,23 @@ const Footer: React.FC = () => {
       <div className=" flex items-center justify-center flex-col">
         <div className=" lg:w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Logo and Social Media */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
                 <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
                   <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
                 </div>
               </div>
-              <span className="text-xl font-bold text-gray-800">Nouveau Visuals</span>
+              {/* <span className="text-xl font-bold text-gray-800">Nouveau Visuals</span> */}
+              <Link href="/">
+            <Image
+            src={'/icons/logo.png'}
+            alt="logo"
+            width={130}
+            height={20}
+            className=""
+            />
+            </Link>
             </div>
 
             <div className='max-w-[12rem]'>

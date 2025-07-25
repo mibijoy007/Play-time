@@ -5,7 +5,7 @@ import Image from "next/image";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { useEffect, useState } from "react";
 
-export default function SliderEight() {
+export default function SliderEightcopy() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
@@ -22,7 +22,7 @@ export default function SliderEight() {
     //   spacing: 0,
     // },
     slides: {
-      origin: 'center', // Centers slides for better focus
+      // origin: 'center', // Centers slides for better focus
       perView: 1,    // Shows 1 full slide + peek of next
       spacing: 0,      // Adjust this value for gap control
     },

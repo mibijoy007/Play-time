@@ -10,11 +10,12 @@ import { JSX } from "react";
 // import SliderFive from "@/components/SliderFive";
 // import SliderSix from "@/components/HowWeWork";
 // import SliderSeven from "@/components/SliderSeven";
-import SliderEight from "@/components/SliderEight";
+// import SliderEight from "@/components/SliderEight";
 import SliderNine from "@/components/SliderNine";
 import LastPage from "@/components/LastPage";
 import HowWeWork from "@/components/HowWeWork";
 import Faq from "@/components/Faq";
+import SliderEightcopy from "@/components/SliderEightcopy";
 
 
 
@@ -31,13 +32,15 @@ export default function Home(): JSX.Element {
       <Intro />
 
       <HowWeWork/>
-      <Faq/>
       {/* <SliderSeven/> */}
-      <SliderEight/> {/* <Philosophy/> */}
+       {/* Philosophy */}
+       {/* <SliderEight/> */}
+       <SliderEightcopy/>
       {/* here is problem form Philosophy */}
       <SliderNine/>{/* <What we do/> */}
-      <LastPage/>
     
+      <Faq/>
+      <LastPage/>
     </SectionScrollerWrapper>
       
       </>

@@ -1,13 +1,14 @@
 "use client";
 import { siteConfig } from "@/lib/siteConfig";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import {
   FaBehance,
-  FaBehanceSquare,
+  // FaBehanceSquare,
   FaLinkedin,
-  FaLinkedinIn,
+  // FaLinkedinIn,
 } from "react-icons/fa";
 // import { FaLinkedin } from 'react-icons/fa6';
 import { RiCloseFill } from "react-icons/ri";
@@ -73,8 +74,8 @@ const NavTest: React.FC = () => {
   return (
     <>
       {/* <nav className="sticky top-0 z-50 bg-slate-200 opacity-[94%] shadow-md border-b-2 border-gray-500"> */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between bg-slate-200 opacity-[94%] shadow-md border-b-2 border-gray-500">
-        {/*
+      {/* <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between  bg-transparent shadow-md  border-gray-500"> */}
+<nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between bg-white/35 backdrop-blur-sm shadow-lg ">        {/*
         Sticky Navbar:
         - `sticky top-0`: Makes the navbar stick to the top of the viewport when scrolling.
         - `z-50`: Ensures the navbar stays on top of other content.
@@ -83,11 +84,20 @@ const NavTest: React.FC = () => {
         <div className=" w-full mx-auto px-2 md:px-3 lg:px-6  py-0.5 flex justify-between items-center ">
           <div>
             {/* Logo/Brand Section */}
-            <Link
+            {/* <Link
               href="/"
               className="text-2xl font-bold text-gray-800 rounded-md p-2"
             >
               {siteConfig.name}
+            </Link> */}
+            <Link href="/">
+            <Image
+            src={'/icons/logo.png'}
+            alt="logo"
+            width={110}
+            height={20}
+            className=""
+            />
             </Link>
           </div>
 
@@ -104,7 +114,8 @@ const NavTest: React.FC = () => {
                 className={
                   link.href != "/quote"
                   ? " text-gray-700 text-sm lg:text-base hover:text-blue-600 transition-colors duration-300 rounded-md py-2 px-3"
-                  : "flex items-center cursor-pointer border-2 border-teal-800 bg-teal-500 hover:bg-teal-400 text-white h-9 px-3 py-1 rounded-full transition-all duration-300 hover:scale-105"
+                  : "my-button flex items-center cursor-pointer  bg-teal-500 hover:bg-teal-400 text-white h-9 px-3 py-1 rounded-full transition-all duration-300 hover:scale-105"
+                 
                 }
               >
                 {link.name}
@@ -120,7 +131,7 @@ const NavTest: React.FC = () => {
               className="FootIcon"
             >
               <FaBehance size={18} />
-              <span className="sr-only">GitHub</span>
+              <span className="sr-only">behance</span>
             </Link>
             <Link
               target="_blank"
@@ -186,7 +197,9 @@ const NavTest: React.FC = () => {
                className={` text-lg text-center  ${
                   link.href != "/quote"
                   ? " text-gray-700  hover:text-blue-600 transition-all duration-300 rounded-md py-2 px-3 w-full  text-center hover:bg-gray-50"
-                  : " flex items-center cursor-pointer border-2 border-teal-800 bg-teal-500 hover:bg-teal-400 text-white h-9 px-3 py-1 rounded-full transition-all duration-300 hover:scale-105 "
+                  // : " flex items-center cursor-pointer border-2 border-teal-800 bg-teal-500 hover:bg-teal-400 text-white h-9 px-3 py-1 rounded-full transition-all duration-300 hover:scale-105 "
+                  // : "flex items-center cursor-pointer border-2 border-teal-800 bg-teal-500 hover:bg-teal-400 text-white h-9 px-3 py-1 rounded-full transition-all duration-300 hover:scale-105 animate-jump"
+                  : "my-button"
                 } ` }
                 onClick={() => setIsMenuOpen(false)} // Close menu when a link is clicked
               >

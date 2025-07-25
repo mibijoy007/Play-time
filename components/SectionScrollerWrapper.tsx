@@ -1,8 +1,8 @@
 'use client';
 import { useState, useEffect, ReactNode, JSX } from 'react';
 import { motion, Easing } from 'framer-motion';
-import Navbar from './Navbar'; // Import your new Navbar component
-import NavTest from './NavTest';
+// import Navbar from './Navbar'; // Import your new Navbar component
+// import NavTest from './NavTest';
 
 interface SectionScrollerWrapperProps {
   children: ReactNode[];

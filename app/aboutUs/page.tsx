@@ -85,7 +85,7 @@ export default function AboutUsPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
           <p className="text-lg md:text-xl opacity-90">
-            Based in Bangladesh, Working worldwide,
+            Based in Bangladesh, Working worldwide.
           </p>
         </div>
       </section>

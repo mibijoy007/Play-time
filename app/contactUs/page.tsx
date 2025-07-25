@@ -4,6 +4,7 @@
 import React from 'react';
 
 import ContactUs from '@/components/ContactUs';
+import Faq from '@/components/Faq';
 // import Address from '@/components/Address';
 
 
@@ -13,9 +14,10 @@ const ContactPage: React.FC = () => {
   
 
   return (
-    <div>
+    <div >
    <section>
-        <ContactUs/>
+    <Faq/>
+    <ContactUs/>
         {/* <Address/> */}
 
     </section>
