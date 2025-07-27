@@ -5,10 +5,18 @@ const nextConfig: NextConfig = {
 };
 module.exports = {
   images: {
-    domains: [
-      'https://www.play-time.es', // Example domain
-      'placehold.co',
-      ],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+    // domains: [
+    //   'https://www.play-time.es', // Example domain
+    //   'placehold.co',
+    //   ],
       dangerouslyAllowSVG: true,
   },
 }

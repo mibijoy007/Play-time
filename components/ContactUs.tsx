@@ -1,110 +1,131 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { FiPhone, FiMail } from 'react-icons/fi';
 
-interface FormData {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
+// interface FormData {
+//   name: string;
+//   email: string;
+//   subject: string;
+//   message: string;
+// }
 
-interface FormErrors {
-  name?: string;
-  email?: string;
-  subject?: string;
-  message?: string;
-}
+// interface FormErrors {
+//   name?: string;
+//   email?: string;
+//   subject?: string;
+//   message?: string;
+// }
 
 const ContactUs: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
 
-  const [errors, setErrors] = useState<FormErrors>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
 
-  const validateForm = (): boolean => {
-    const newErrors: FormErrors = {};
 
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    }
 
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
-    }
 
-    if (!formData.subject.trim()) {
-      newErrors.subject = 'Subject is required';
-    }
+  // const [formData, setFormData] = useState<FormData>({
+  //   name: '',
+  //   email: '',
+  //   subject: '',
+  //   message: ''
+  // });
 
-    if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
-    } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters long';
-    }
+  // const [errors, setErrors] = useState<FormErrors>({});
+  // const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+  // const validateForm = (): boolean => {
+  //   const newErrors: FormErrors = {};
 
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+  //   if (!formData.name.trim()) {
+  //     newErrors.name = 'Name is required';
+  //   }
 
-    // Clear error when user starts typing
-    if (errors[name as keyof FormErrors]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: undefined
-      }));
-    }
-  };
+  //   if (!formData.email.trim()) {
+  //     newErrors.email = 'Email is required';
+  //   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+  //     newErrors.email = 'Please enter a valid email address';
+  //   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  //   if (!formData.subject.trim()) {
+  //     newErrors.subject = 'Subject is required';
+  //   }
+
+  //   if (!formData.message.trim()) {
+  //     newErrors.message = 'Message is required';
+  //   } else if (formData.message.trim().length < 10) {
+  //     newErrors.message = 'Message must be at least 10 characters long';
+  //   }
+
+  //   setErrors(newErrors);
+  //   return Object.keys(newErrors).length === 0;
+  // };
+
+  // const handleInputChange = (
+  //   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  // ) => {
+  //   const { name, value } = e.target;
+  //   setFormData(prev => ({
+  //     ...prev,
+  //     [name]: value
+  //   }));
+
+  //   // Clear error when user starts typing
+  //   if (errors[name as keyof FormErrors]) {
+  //     setErrors(prev => ({
+  //       ...prev,
+  //       [name]: undefined
+  //     }));
+  //   }
+  // };
+
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
     
-    if (!validateForm()) {
-      return;
-    }
+  //   if (!validateForm()) {
+  //     return;
+  //   }
 
-    setIsSubmitting(true);
-    setSubmitStatus(null);
+  //   setIsSubmitting(true);
+  //   setSubmitStatus(null);
 
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+  //   try {
+  //     // Simulate API call
+  //     // await new Promise(resolve => setTimeout(resolve, 1000));
+  //      const res = await fetch('/api/send', {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/json' },
+  //     body: JSON.stringify(formData),
+  //   });
       
-      // Here you would typically send the form data to your API
-      console.log('Form submitted:', formData);
+  //     // Here you would typically send the form data to your API
+  //     console.log('Form submitted:', formData);
       
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-    } catch (error) {
-      console.error('Form submission error:', error);
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  //     const result = await res.json();
+  //     console.log('result>> ', result);
+
+  //     if(result.success){
+
+      
+  //     setSubmitStatus('success');
+  //     setFormData({
+  //       name: '',
+  //       email: '',
+  //       subject: '',
+  //       message: ''
+  //     });
+  //   }else {
+  //     alert("Failed to Send Email!")
+  //     setSubmitStatus('error');
+  //   }
+
+  //   } catch (error) {
+  //     console.error('Form submission error:', error);
+  //     setSubmitStatus('error');
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -150,7 +171,7 @@ const ContactUs: React.FC = () => {
             </div>
 
             {/* Right side - Contact form */}
-            <div className="p-8 lg:p-12">
+            {/* <div className="p-8 lg:p-12">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <input
@@ -232,7 +253,7 @@ const ContactUs: React.FC = () => {
                   </div>
                 )}
 
-                {submitStatus === 'error' && (
+                {submitStatus != 'error' && (
                   <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
                     <p className="text-red-800 text-sm">
                       Sorry, there was an error sending your message. Please try again.
@@ -240,7 +261,12 @@ const ContactUs: React.FC = () => {
                   </div>
                 )}
               </form>
-            </div>
+            </div> */}
+
+
+
+
+
           </div>
         </div>
       </div>

@@ -24,13 +24,14 @@ export interface GalleryItem  {
   image: string;
 };
 
-interface GalleryLightboxProps {
-  className?: string;
-}
+// //next dev error(not accepting anything  rather than page props)
+// interface GalleryLightboxProps {
+//   className?: string;
+// }
 
-export default function GalleryLightbox({
-  className = "",
-}: GalleryLightboxProps): JSX.Element {
+// export default function GalleryLightbox({className = ""}: GalleryLightboxProps): JSX.Element {
+export default function GalleryLightbox(): JSX.Element {
+
   const [open, setOpen] = useState<boolean>(false);
   const [index, setIndex] = useState<number>(0);
   const gallery: GalleryItem[] = galleryData;
@@ -60,9 +61,14 @@ export default function GalleryLightbox({
       {/* <div className="overflow-x-hidden "> */}
       {/* <Navbar/> */}
       {/* <NavTest/> */}
-      <div className={`w-full mt-5 md:mt-10 ${className}`}>
+      {/* <div className={`w-full mt-5 md:mt-10 ${className}`}> */}
 
+      <div className={`w-full mt-5 md:mt-10 `}>
 
+          {/* <h1 className="text-black text-center  text-3xl md:text-5xl pt-8 mb-7">Projects
+            <span className="text-gray-500 text-center text-sm ml-2">( Honourable Mentions )</span>
+          </h1> */}
+          
         {/* Gallery Grid - Three Columns with Hover Text */}
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 p-4 space-y-6">
           {gallery.map((item: GalleryItem, i: number) => (

@@ -68,7 +68,7 @@ export default function SliderEightcopy() {
         <div className="keen-slider__slide p-2">
           <div className="relative w-full aspect-square overflow-hidden rounded-3xl">
             <Image
-              src="/BannerThree/3.jpg"
+              src="/bannerThree/3.jpg"
               alt="Play image 1"
               fill
               className="object-cover w-full h-full"
@@ -89,7 +89,7 @@ export default function SliderEightcopy() {
         <div className="keen-slider__slide p-2">
           <div className="relative w-full aspect-square overflow-hidden rounded-3xl">
             <Image
-              src="/BannerThree/4.jpg"
+              src="/bannerThree/4.jpg"
               alt="Play image 2"
               fill
               className="object-cover w-full h-full"
