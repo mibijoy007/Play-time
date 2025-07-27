@@ -1,6 +1,7 @@
 // import Navbar from "@/components/Navbar";
 
 import Faq from "@/components/Faq";
+// import CustomerReviews from "@/components/Reviews";
 import Image from "next/image";
 import React from "react";
 
@@ -218,6 +219,9 @@ Interior Visualizations starting from 500 USD
           </div>
         </section>
       </div>
+
+
+      {/* <CustomerReviews /> */}
 
       {/* Pricing Section */}
       <div className="bg-gray-50 pt-12 pb-14 px-4">

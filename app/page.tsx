@@ -16,6 +16,7 @@ import LastPage from "@/components/LastPage";
 import HowWeWork from "@/components/HowWeWork";
 import Faq from "@/components/Faq";
 import SliderEightcopy from "@/components/SliderEightcopy";
+import ToolsCompSlide from "@/components/ToolsCompSlide";
 
 
 
@@ -38,6 +39,7 @@ export default function Home(): JSX.Element {
        <SliderEightcopy/>
       {/* here is problem form Philosophy */}
       <SliderNine/>{/* <What we do/> */}
+      <ToolsCompSlide/>
     
       <Faq/>
       <LastPage/>

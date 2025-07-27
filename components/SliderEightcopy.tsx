@@ -46,8 +46,8 @@ export default function SliderEightcopy() {
   // }, [instanceRef]);
 
   // Slide text content
-  const slideTexts = ["Water Tower",  "TITAN","Tengbom"];
-  const slidePara = ["ON-A", "Sketch"];
+  const slideTexts = [  "Lake Home","West View Cemetery"];
+  const slidePara = ["Wisconsin, US","Georgia, US"];
 
   return (
     <div className="relative h-screen bg-[#e5d7b4]">
@@ -68,7 +68,7 @@ export default function SliderEightcopy() {
         <div className="keen-slider__slide p-2">
           <div className="relative w-full aspect-square overflow-hidden rounded-3xl">
             <Image
-              src="/BannerThree/2.jpg"
+              src="/BannerThree/3.jpg"
               alt="Play image 1"
               fill
               className="object-cover w-full h-full"
@@ -89,7 +89,7 @@ export default function SliderEightcopy() {
         <div className="keen-slider__slide p-2">
           <div className="relative w-full aspect-square overflow-hidden rounded-3xl">
             <Image
-              src="/BannerThree/1.jpg"
+              src="/BannerThree/4.jpg"
               alt="Play image 2"
               fill
               className="object-cover w-full h-full"
@@ -111,7 +111,7 @@ export default function SliderEightcopy() {
 
 {/* Navigation Dots - Positioned at bottom right */}
       {loaded && instanceRef.current && (
-        <div className=" flex justify-center pr-10 space-x-2 ">
+        <div className=" flex justify-center pr-28 space-x-2 ">
         {/* // <div className=" dots bg-red-600"> */}
           {[0, 1].map((idx) => (
             <button

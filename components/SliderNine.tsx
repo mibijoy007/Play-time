@@ -33,8 +33,8 @@ export default function SliderNine() {
   // }, [instanceRef]);
 
   // Slide text content
-  const slideTexts = ["Water Tower", "Water Tower", "TITAN","Tengbom"];
-  const slidePara = ["ON-A", "ON-A", "Sketch"];
+  const slideTexts = ["Light House", "Party Center"];
+  const slidePara = ["Havens Group", "Wyile, Texas"];
 
   return (
     <div className="relative h-screen ">
@@ -44,14 +44,17 @@ export default function SliderNine() {
         {/* Slide 1 */}
         <div className="keen-slider__slide">
           <div className="grid grid-cols-2 h-full bg-[#e1f0f6] relative">
+            <div className="relative aspect-square w-full h-full overflow-hidden flex justify-center items-center">
+
             <Image
-              src="/BannerThree/2.jpg"
+              src="/sumit/exterior3.png"
               alt="Play image 3"
-              width={400}
-              height={400}
-              className="object-cover mx-auto my-auto "
+              width={700}
+              height={500}
+              className="object-cover w-[80%] h-[75%]  rounded-xl"
               priority
-            />
+              />
+              </div>
             <div className="h-full flex flex-col items-center justify-center">
               <h1 className="text-2xl mb-4 font-semibold">
                What we do
@@ -62,6 +65,7 @@ export default function SliderNine() {
                Our job is all about crafting images with the utmost care and attention to detail. As architects and image makers, 
                we constantly strive for improvement to create the best possible outcome. 
                <br /> We understand that crucial elements like texturing, lighting, and selecting the perfect perspective are key in conveying the story we want to tell. It’s a constant learning process, but we are always up for the challenge of refining our craft.
+              
               </h1>
             </div>
             {/* Text at bottom left */}
@@ -69,7 +73,7 @@ export default function SliderNine() {
               <h2 className="text-3xl md:text-4xl font-bold text-black drop-shadow-lg">
                 {slideTexts[0]}
               </h2>
-              <p className=" text-MD mt-4 ml-4 font-bold text-inherit drop-shadow-lg">
+              <p className=" text-MD mt-4 ml-4  text-inherit drop-shadow-lg">
                 {slidePara[0]}
               </p>
             </div>
@@ -80,7 +84,7 @@ export default function SliderNine() {
         <div className="keen-slider__slide">
           <div className=" grid grid-cols-2">
             <Image
-              src="/BannerThree/1.jpg"
+              src="/sumit/philo.jpg"
               alt="Play image 1"
               fill
               className="object-cover"
@@ -89,10 +93,10 @@ export default function SliderNine() {
             {/* Text at bottom left */}
             <div className="absolute flex bottom-8 left-8 max-w-2xl">
               <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
-                {slideTexts[0]}
+                {slideTexts[1]}
               </h2>
-              <p className=" text-MD mt-4 ml-4 font-bold text-white drop-shadow-lg">
-                {slidePara[0]}
+              <p className=" text-MD mt-4 ml-4  text-white drop-shadow-lg">
+                {slidePara[1]}
               </p>
             </div>
           </div>

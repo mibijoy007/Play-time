@@ -11,13 +11,14 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 
-import galleryData from "./gallery.json";
+
 import CompaniesWorked from "@/components/CompaniesWorked";
 import ToolsUsed from "@/components/ToolsUsed";
+import { galleryData } from "./gallery";
 // import Navbar from "@/components/Navbar";
 // import NavTest from "@/components/NavTest";
 
-type GalleryItem = {
+export interface GalleryItem  {
   title: string;
   category: string;
   image: string;
@@ -47,9 +48,15 @@ export default function GalleryLightbox({
   // const nextIndex = () => (index === gallery.length - 1 ? 0 : index + 1);
 
   return (
-    <div className="">
-      <ToolsUsed/>
-      <CompaniesWorked/>
+    <div className="pt-10">
+      {/* <div className="text-center max-w-6xl px-4   w-full pt-6"> */}
+         
+        
+         <CompaniesWorked/>
+         <div className="w-[80%] h-[1.5px] bg-gray-400 flex items-center justify-center text-center mx-auto mb-3"/>
+
+      {/* </div> */}
+
       {/* <div className="overflow-x-hidden "> */}
       {/* <Navbar/> */}
       {/* <NavTest/> */}
@@ -249,8 +256,11 @@ export default function GalleryLightbox({
         }
       `}</style>
 
+         <div className="w-[60%] h-0.5 bg-gray-400 flex items-center justify-center text-center mx-auto my-4"/>
 
+          <ToolsUsed/>
 
+          <br className="mb-3" />
         {/* behance section */}
       {/* <div className="relative w-full max-w-sm m-4  overflow-hidden shadow-lg mt-12">
         <div style={{ paddingBottom: '78.22%' }}></div>

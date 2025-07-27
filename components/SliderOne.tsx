@@ -95,7 +95,7 @@ export default function SliderOne() {
             
             <Image
             src="/hero-section/2.jpg"
-             alt="NV 2"
+             alt="NV-2"
               fill
               className="object-cover"
               sizes="100vw"
@@ -231,16 +231,18 @@ export default function SliderOne() {
         
       </div>
 
+<div className="border-2 border-blue-500">
+ffff
       {/* Navigation Dots - Positioned at bottom right */}
       {loaded && instanceRef.current && (
-        <div className="absolute bottom-8 right-8 flex space-x-2">
+        <div className="absolute bottom-8 right-8 flex space-x-2 border-4 border-blue-600  rounded-full my-button">
           {[0, 1, 2, 3, 4, 5].map((idx) => (
             <button
               key={idx}
               onClick={() => instanceRef.current?.moveToIdx(idx)}
-              className={`w-2 h-2 rounded-full transition-all ${
+              className={`w-3 h-3 rounded-full transition-all ${
                 currentSlide === idx
-                  ? "bg-white scale-125"
+                  ? "bg-white scale-150"
                   : "bg-gray-500 bg-opacity-50"
               }`}
               aria-label={`Go to slide ${idx + 1}`}
@@ -248,6 +250,7 @@ export default function SliderOne() {
           ))}
         </div>
       )}
+      </div>
     </div>
   );
 }
